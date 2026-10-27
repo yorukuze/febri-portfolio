@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-browser: var(--browser);
+  --color-browser-dot: var(--browser-dot);
+  --color-live: var(--live);
+  --color-hover: var(--hover);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --letter-spacing-body: -0.004em;
+  --letter-spacing-display: -0.02em;
+  --letter-spacing-heading: -0.01em;
+  --letter-spacing-label: 0.04em;
+}
+
+:root,
+[data-theme="dark"] {
+  --bg: #0b0b0c;
+  --surface: #151517;
+  --surface-2: #1c1c1f;
+  --line: #ffffff12;
+  --line-strong: #ffffff21;
+  --ink: #ededec;
+  --ink-2: #c9c9cc;
+  --muted: #9a9a9f;
+  --faint: #88888d;
+  --browser: #111113;
+  --browser-dot: #3a3a3e;
+  --live: #4ade80;
+  --hover: #ffffff08;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --surface-2: #f2f2f0;
+  --line: #00000012;
+  --line-strong: #00000024;
+  --ink: #111111;
+  --ink-2: #3a3a3c;
+  --muted: #5f5f64;
+  --faint: #6e6e73;
+  --browser: #f7f7f5;
+  --browser-dot: #d4d4d0;
+  --live: #13773a;
+  --hover: #00000005;
+  color-scheme: light;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.004em;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 99px;
+}
+
+/* Custom utility bindings for exact color matches */
+.bg-bg { background-color: var(--bg); }
+.bg-surface { background-color: var(--surface); }
+.bg-surface-2 { background-color: var(--surface-2); }
+.bg-browser { background-color: var(--browser); }
+.bg-browser-dot { background-color: var(--browser-dot); }
+.bg-ink { background-color: var(--ink); }
+.bg-hover { background-color: var(--hover); }
+
+.text-bg { color: var(--bg); }
+.text-ink { color: var(--ink); }
+.text-ink-2 { color: var(--ink-2); }
+.text-muted { color: var(--muted); }
+.text-faint { color: var(--faint); }
+.text-live { color: var(--live); }
+
+.border-line { border-color: var(--line); }
+.border-line-strong { border-color: var(--line-strong); }
+.outline-line-strong { outline-color: var(--line-strong); }
+
+.tracking-display { letter-spacing: -0.02em; }
+.tracking-heading { letter-spacing: -0.01em; }
+.tracking-label { letter-spacing: 0.04em; }
+
+/* View transitions support */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-febri",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.9",
+    "@vueuse/core": "^12.8.2",
+    "nuxt": "^3.15.4",
+    "tailwindcss": "^4.0.9",
+    "vue": "^3.5.44",
+    "vue-router": "^4.6.4"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
